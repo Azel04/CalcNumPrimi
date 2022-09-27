@@ -1,1 +1,0 @@
-#Calcolo numeri primi
