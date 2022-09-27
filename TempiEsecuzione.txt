@@ -1,0 +1,5 @@
+Tempo da inizio a fine: 42.651 s
+Tempo da inizio a metà fine: 32.124 s
+Tempo da inizio a metà fine + esclusione numeri pari e divisori pari: 18.267 s
+Tempo da inizio a radice quadrata fine + esclusione numeri pari e divisori pari: 0.209 s
+Tempo da inizio a radice quadrata fine + esclusione numeri pari e divisori pari + 2 Thread: 0.153 s
