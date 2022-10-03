@@ -22,12 +22,14 @@ public class Calcolo extends Thread{
     @Override
         public void run(){
             BigInteger resto;
-            BigInteger i, j;
+            BigInteger i, j, k;
+            int esp;
             int primo = 1;
             primo = 1;
             //System.out.println("THREAD IN ESECUZIONE");
             for(i = inizio; i.compareTo(fine) <= 0; i = i.add(BigInteger.ONE)){
                 if(i.mod(BigInteger.TWO) != BigInteger.ZERO){
+                    /* 
                     for(j = new BigInteger("3"); j.compareTo(fine.sqrt()) < 0; j = j.add(BigInteger.TWO)){
                         resto = i.mod(j);
                         //System.out.println("Resto divisione tra " + i + " e " + j + " è " + resto);
@@ -35,6 +37,13 @@ public class Calcolo extends Thread{
                             primo = 0;
                             break;
                         }
+                    }
+                    */
+                    
+                    j = BigInteger.TWO;
+                    k = j.modPow(i.subtract(BigInteger.ONE), i);
+                    if(!(k.compareTo(BigInteger.ONE) == 0)){
+                        primo = 0;
                     }
                 }
                 else{
