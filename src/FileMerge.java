@@ -35,6 +35,33 @@ public class FileMerge {
           
         //Chiusura file
         FileTemp.close();
+
+        FileTemp = new BufferedReader(new FileReader("tmp/numprimi3.txt")); //Viene aperto il secondo file
+          
+        line = FileTemp.readLine();
+          
+        //Viene copiato il file 2 su file finale
+        while(line != null)
+        {
+            filefinale.println(cont + ": " + line); //Scrive su file finale
+            line = FileTemp.readLine(); //Legge riga del file
+            cont = cont.add(BigInteger.ONE);
+        }
+
+        FileTemp.close();
+
+        FileTemp = new BufferedReader(new FileReader("tmp/numprimi4.txt")); //Viene aperto il secondo file
+          
+        line = FileTemp.readLine();
+          
+        //Viene copiato il file 2 su file finale
+        while(line != null)
+        {
+            filefinale.println(cont + ": " + line); //Scrive su file finale
+            line = FileTemp.readLine(); //Legge riga del file
+            cont = cont.add(BigInteger.ONE);
+        }
+        FileTemp.close();
         filefinale.close();
     }
 }
