@@ -21,12 +21,10 @@ public class Calcolo extends Thread{
     }
     @Override
         public void run(){
-            BigInteger resto;
             BigInteger i, j, k;
-            int esp;
             int primo = 1;
             primo = 1;
-            //System.out.println("THREAD IN ESECUZIONE");
+            //System.out.println("Da " + inizio + " a " + fine);
             for(i = inizio; i.compareTo(fine) <= 0; i = i.add(BigInteger.ONE)){
                 if(i.mod(BigInteger.TWO) != BigInteger.ZERO){
                     /* 
